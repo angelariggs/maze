@@ -5,15 +5,32 @@ var rl = readline.createInterface({
  output: process.stdout
 });
 
-if ("left" ) {
- console.log("congradulations");
-} else {
- 
-}
-
 rl.question("You're at the start of a maze. You walk down the opening, you can turn right or left. Which do you pick? ", function(answer) {
- // TODO: Log the answer in a database
- console.log("You,ve picked carefully and it's paid off. You've managed to avoid the afterlife. You now walk down the second hall and have three choices. Left, Straight, and Right. Which do you pick?:", answer);
+ if (answer === "left" ) {
+  console.log("Congratulations!");
+  rl.question("You walk through a doorway and come to three colored doors. Do you choose the red door, green door, or blue door?", function(answer) {
+    if (answer === "red") {
+      console.log("Oh no! Red means death, fool.");
+    }
+  })
 
- rl.close();
+} else if (answer === "right") {
+  console.log("Wrong move, sucka");
+  }
+  else if (answer === "straight") {
+  console.log("That wasn't a choice. Try again!");
+  }
+  else if (answer === "Left", "Right") {
+  console.log("No caps, fool!");
+  }
+
 });
+
+/*console.log("You've picked carefully and it's paid off. You've managed to avoid the afterlife. You now walk down the second hall and have three choices. Left, Straight, and Right. Which do you pick?:", answer);*/
+
+
+
+
+
+
+/*nested callback*/
